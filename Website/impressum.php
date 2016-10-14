@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Impressum'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Impressum'); ?></h1>
 <?php echo CONFIG_CONTACT_PAGE_HTML; ?>
 <h1><?php echo _('Danksagungen, Quellen und Autoren') ?></h1>
@@ -13,4 +13,4 @@
 <li><a href="http://famfamfam.com/lab/icons/flags/">&quot;Flags&quot;</a> &mdash; <a href="http://famfamfam.com/">famfamfam</a></li>
 <li><a href="http://prothemedesign.com/free-webdesign-tools/circular-icons/">&quot;Circular Icons&quot;</a> &mdash; <a href="http://prothemedesign.com/">Pro Theme Design</a></li>
 </ul>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

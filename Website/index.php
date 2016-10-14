@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php if ($loggedin == 1) { ?><title><?php echo _('Büro'); ?> - <?php echo CONFIG_SITE_NAME; ?></title><?php } else { ?><title><?php echo _('Online-Fußball-Manager'); ?> - <?php echo CONFIG_SITE_NAME; ?></title><?php } ?>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
 if ($cookie_team != '__'.$cookie_id) {
@@ -235,7 +235,7 @@ else {
 					echo '<p>'.__('Herzlichen Glückwunsch! %s freut sich sehr, Dich als neuen Manager begrüßen zu dürfen! Du erhältst Dein Team automatisch beim nächsten Login.', $newUser_getData3['name']).'</p>';
 					echo '<p>'._('Wenn Du sofort spielen möchtest, loggst Du Dich am besten aus und anschließend direkt wieder ein. Du kommst dann direkt ins Büro Deines Vereins.').'</p>';
 					echo '<p>'._('Viel Spaß!').'</p>';
-					include 'zz3.php';
+					include_once(__DIR__.'/zz3.php');
 					exit;
 				}
 			}
@@ -285,9 +285,7 @@ else {
 <p><input type="submit" value="<?php echo _('Jetzt kostenlos mitspielen'); ?>" /></p>
 <p><?php echo _('Du kannst Deine Daten anschließend noch einmal prüfen, sie werden noch nicht gespeichert. Du darfst Dich nur ein einziges Mal registrieren und nur einen Verein haben.'); ?></p>
 </form>
-<h1>Dev Blog</h1>
 <?php
-include_once('devBlog/25_08_2016.html');
 if (isset($_GET['r'])) {
 	$referralID = mysql_real_escape_string(trim(strip_tags($_GET['r'])));
 	if (mb_strlen($referralID) == 32) {
@@ -297,4 +295,4 @@ if (isset($_GET['r'])) {
 ?>
 <?php } ?>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,5 +1,5 @@
 <?php
-require_once '/../config.php';
+require_once(__DIR__.'/../config.php');
 
 class DB {
     
@@ -11,6 +11,10 @@ class DB {
         }
 
         $result = mysql_query($query);
+        
+        if ($result === FALSE) {
+            LOG::logToErrFile($query . "\n");
+        }
         
         if($closeConnection) {
             static::close();

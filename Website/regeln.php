@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Regeln'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php
 if ($loggedin == 1) {
 	if (isset($_POST['acceptedRules'])) {
@@ -139,4 +139,4 @@ if ($loggedin == 1) {
 <li><a href="http://de.wikipedia.org/wiki/User_Agent">User-Agent-Header</a></li>
 <li><a href="http://de.wikipedia.org/wiki/IP-Adresse">IP-Adresse</a></li>
 </ul>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>
